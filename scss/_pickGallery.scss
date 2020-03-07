@@ -1,0 +1,86 @@
+%miniImage {
+    border-radius: 50px;
+    box-shadow: black 5px 5px 5px;
+    &:hover {
+        box-shadow: black 2.5px 2.5px 2.5px;
+        scale: 0.75;
+        transition: .7s;
+    }
+    width: 100%;
+    height: auto;
+
+}
+
+//Extensions abound!
+
+.pick {
+    img {
+        @extend %miniImage;
+        @media (min-width: 1100px) {
+            width: 500px / 1000px * 100%;
+            margin-bottom: 25px;
+            //Example of a math operation!
+        }
+    }
+
+    @media (min-width: 1100px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.gallery {
+    @media (min-width: 1100px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    div {
+        img {
+            @extend %miniImage;
+        }
+    }
+}
+
+.choose {
+    // h1, h2, h3, h4, h5, h6 {
+    //     text-align: center;
+    // }
+    
+    // An attempt was made into making a map into the code, don't know why adding a semicolon didn't fix the error caused by a lack of a semicolon
+    $examples: {
+        .example1: $font-color;
+        .example2: $navHover;
+        .example3: $footerBackground;
+        .example4: $nav;
+        .example5: $navHoverText;
+    };
+    
+    @each $name, $value in $examples {
+        .example#{$name} {
+            background-color: $value;
+        }
+    };
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    @media (min-width: 1100px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+};
+
+// Below is an example of a list property being utilized!
+
+$heading-colors: $font-color, $navHover, $footerBackground, $nav, $navHoverText;
+
+@for $item from 1 through length($heading-colors) {
+    h#{$item} {
+        color: nth($heading-colors, $item);
+    }
+};

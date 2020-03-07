@@ -1,0 +1,27 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: $footerBackground;
+        transition: .65s;
+    }
+    //Here's an example of the color module!
+    background-color: complement($footerBackground);
+    height: 1.07em;
+    p {
+        font-size: .5em;
+        text-align: center;
+        font-family: $core-script;
+        &:hover {
+            color: complement($background);
+            transition: .65s;
+
+            //Here's an example of an @if statement!
+            @if $background {
+                background-color: $background;
+                color: $font-color;
+            }
+        }
+    }
+}

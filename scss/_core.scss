@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Ubuntu+Mono&display=swap');
+
+$background: gainsboro;
+$font-color: black;
+$header-background-color: steelblue;
+$main-script: 'Architects Daughter';
+$core-script: 'Ubuntu Mono';
+$nav: seagreen;
+$navHover: #c83200;
+$navHoverText: orange;
+$footerBackground: steelblue;
+
+body {
+    background-color: $background;
+    margin: 0;
+    padding: 0;
+    font-size: 1.35em;
+    color: $font-color;
+    font-family: $main-script, sans-serif;
+}

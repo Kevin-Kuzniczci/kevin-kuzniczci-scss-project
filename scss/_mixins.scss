@@ -1,0 +1,11 @@
+
+// Consider adding CSS animations that involve extending and the math module
+
+// Required: math module, color module, list module, and map module
+
+@mixin navHoverAct {
+    background-color: $navHover;
+    box-shadow: black 2.5px 2.5px 2.5px;
+    scale: .9;
+    transition: .6s;
+}

@@ -1,0 +1,11 @@
+Styles.scss is the main hub for all the partial files.
+
+_pickGallery.scss contains a good number of required content.
+
+_footer.scss contains a color module and an @if thingamajig
+
+Nesting and extends can be found fairly quickly, especially in _pickGallery.scss
+
+_main.scss contains a lot of the core variables
+
+_mixins.scss is self-explanatory

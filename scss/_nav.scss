@@ -1,0 +1,41 @@
+// Basic navigation page code for all 3 pages
+nav {
+    background-color: $header-background-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .logo {
+        justify-self: flex-start;
+        margin-top: 7px;
+    }
+    h1 {
+        font-size: 1.85em;
+        font-family: $core-script;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+
+        //Here are some examples of double-nesting!
+
+        li {
+            background-color: $nav;
+            margin-right: 15px;
+            border-radius: 10px;
+            // Here is where the mixins for navigation are stored!
+            &:hover {
+                @include navHoverAct;
+            }
+            box-shadow: black 5px 5px 5px;
+        }
+
+        li  a {
+            font-family: $core-script;
+            text-decoration: none;
+            font-size: 1.75em;
+        }
+    }
+}
